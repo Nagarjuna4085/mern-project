@@ -1,0 +1,18 @@
+import mongoose from 'mongoose';
+const dbUrl = "mongodb+srv://nagarjuna:nagarjuna123@cluster0.oynhj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const connectionParams = {
+    useNewUrlParser: true, useUnifiedTopology: true
+};
+
+mongoose.connect(dbUrl,connectionParams).then(
+    () =>{
+        console.info("db connected");
+    }
+).catch(
+    (e) => {
+        console.log("error occues",e);
+    }
+)
+
+
+
